@@ -1,0 +1,44 @@
+/*
+  Mixed-language text is primarily handled by HTML dir="auto".
+  Avoid forcing unicode-bidi: plaintext on entire messages; it can reorder
+  punctuation and inline English fragments unexpectedly.
+*/
+
+.smart-bidi-enabled [data-smart-bidi="rtl"] {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: isolate !important;
+}
+
+.smart-bidi-enabled [data-smart-bidi="ltr"] {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+}
+
+/* Programming content must remain predictable and copyable. */
+.smart-bidi-enabled pre,
+.smart-bidi-enabled code,
+.smart-bidi-enabled kbd,
+.smart-bidi-enabled samp {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+}
+
+/* Inline technical fragments should stay isolated inside RTL paragraphs. */
+.smart-bidi-enabled :not(pre) > code,
+.smart-bidi-enabled kbd,
+.smart-bidi-enabled samp {
+  display: inline-block;
+}
+
+/* Inputs use dir=auto, while JS only chooses visual alignment. */
+.smart-bidi-enabled textarea,
+.smart-bidi-enabled input[type="text"],
+.smart-bidi-enabled input[type="search"],
+.smart-bidi-enabled input:not([type]),
+.smart-bidi-enabled [contenteditable="true"],
+.smart-bidi-enabled [role="textbox"] {
+  unicode-bidi: normal !important;
+}

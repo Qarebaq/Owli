@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Smart RTL / LTR",
+  "version": "1.1.0",
+  "description": "اصلاح هوشمند راست‌چین و چپ‌چین متن‌های فارسی، عربی، لاتین و ترکیبی بدون به‌هم‌ریختن کد و رابط کاربری.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Smart RTL / LTR",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "smart-bidi@local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

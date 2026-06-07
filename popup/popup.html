@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart BiDi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo-row">
+        <svg class="owl-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="16" cy="18" rx="10" ry="11" fill="#e8c97e"/>
+          <ellipse cx="16" cy="20" rx="7" ry="7" fill="#f5e6b8"/>
+          <polygon points="10,9 13,4 16,9" fill="#e8c97e"/>
+          <polygon points="16,9 19,4 22,9" fill="#e8c97e"/>
+          <circle cx="12.5" cy="15" r="4" fill="white"/>
+          <circle cx="19.5" cy="15" r="4" fill="white"/>
+          <circle cx="12.5" cy="15" r="2" fill="#2d2010" class="pupil-l"/>
+          <circle cx="19.5" cy="15" r="2" fill="#2d2010" class="pupil-r"/>
+          <circle cx="13.2" cy="14.2" r=".8" fill="white"/>
+          <circle cx="20.2" cy="14.2" r=".8" fill="white"/>
+          <polygon points="14.5,19 16,22 17.5,19" fill="#d4911a"/>
+        </svg>
+        <div>
+          <h1>Smart BiDi</h1>
+          <p class="site-url" id="site">—</p>
+        </div>
+      </div>
+      <label class="toggle" aria-label="فعال">
+        <input id="enabled" type="checkbox">
+        <span class="track"><span class="thumb"></span></span>
+      </label>
+    </header>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <p class="label">جهت متن</p>
+      <div class="mode-row">
+        <label class="chip"><input type="radio" name="mode" value="auto"><span>خودکار</span></label>
+        <label class="chip"><input type="radio" name="mode" value="rtl"><span>راست‌چین</span></label>
+        <label class="chip"><input type="radio" name="mode" value="ltr"><span>چپ‌چین</span></label>
+      </div>
+    </div>
+
+    <button id="globalToggle" class="text-btn" type="button">
+      <span id="globalToggleLabel">خاموش کردن روی همه سایت‌ها</span>
+    </button>
+
+    <p class="footnote">بلوک‌های کد همیشه چپ‌چین می‌مانند.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
