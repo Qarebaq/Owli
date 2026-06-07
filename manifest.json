@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Smart RTL / LTR",
+  "name": "Owli",
   "version": "1.1.0",
   "description": "اصلاح هوشمند راست‌چین و چپ‌چین متن‌های فارسی، عربی، لاتین و ترکیبی بدون به‌هم‌ریختن کد و رابط کاربری.",
   "permissions": [
@@ -11,7 +11,7 @@
     "<all_urls>"
   ],
   "action": {
-    "default_title": "Smart RTL / LTR",
+    "default_title": "Owli RTL / LTR",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon-16.png",
