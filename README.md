@@ -38,14 +38,14 @@ Owli یک افزونه سبک و متن‌باز برای Firefox است که ج
 برای نمایش حرفه‌ای‌تر پروژه می‌توانید تصویر معرفی را در مسیر زیر قرار دهید:
 
 ```text
-assets/owli-cover.png
+owli.png
 ```
 
 و سپس این بخش را فعال کنید:
 
 ```html
 <p align="center">
-  <img src="assets/owli-cover.png" alt="Owli Firefox Extension" width="900">
+  <img src="owli.png" alt="Owli Firefox Extension" width="900">
 </p>
 ```
 
