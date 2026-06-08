@@ -1,6 +1,13 @@
 <div dir="rtl" align="right">
 
 # Owli
+<p align="center">
+  <img
+    src="owli-demo.gif"
+    alt="دموی افزونه Owli"
+    width="800"
+  >
+</p>
 
 ### اصلاح هوشمند جهت متن‌های فارسی، عربی، انگلیسی و ترکیبی در Firefox
 
@@ -30,18 +37,6 @@ Owli یک افزونه سبک و متن‌باز برای Firefox است که ج
 - رابط کاربری فارسی، مینیمال و سازگار با حالت روشن و تاریک
 - ذخیره تنظیمات با `browser.storage.local`
 - بدون جمع‌آوری یا ارسال اطلاعات کاربر
-
----
-
-## پیش‌نمایش
-
-<p align="center">
-  <img
-    src="owli-demo.gif"
-    alt="دموی افزونه Owli"
-    width="800"
-  >
-</p>
 
 ---
 
