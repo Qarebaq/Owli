@@ -36,7 +36,7 @@ Owli یک افزونه سبک و متن‌باز برای Firefox است که ج
 ##  پیش‌نمایش
 
 <p align="center">
-  <img src="owli.png" alt="Owli Firefox Extension" width="900">
+  <img src="owli.png" alt="Owli Firefox Extension" width="300">
 </p>
 
 ---
