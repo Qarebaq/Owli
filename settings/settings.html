@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>Owli — تنظیمات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="page">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <svg class="owl-icon" viewBox="0 0 32 32" fill="none">
+          <ellipse cx="16" cy="18" rx="10" ry="11" fill="#e8c97e"/>
+          <ellipse cx="16" cy="20" rx="7" ry="7" fill="#f5e6b8"/>
+          <polygon points="10,9 13,4 16,9" fill="#e8c97e"/>
+          <polygon points="16,9 19,4 22,9" fill="#e8c97e"/>
+          <circle cx="12.5" cy="15" r="4" fill="white"/>
+          <circle cx="19.5" cy="15" r="4" fill="white"/>
+          <circle cx="12.5" cy="15" r="2" fill="#2d2010"/>
+          <circle cx="19.5" cy="15" r="2" fill="#2d2010"/>
+          <circle cx="13.2" cy="14.2" r=".8" fill="white"/>
+          <circle cx="20.2" cy="14.2" r=".8" fill="white"/>
+          <polygon points="14.5,19 16,22 17.5,19" fill="#d4911a"/>
+        </svg>
+        <span>Owli</span>
+      </div>
+      <nav>
+        <a href="#general" class="nav-link active" data-section="general">کلی</a>
+        <a href="#exceptions" class="nav-link" data-section="exceptions">استثناها</a>
+        <a href="#about" class="nav-link" data-section="about">درباره</a>
+      </nav>
+    </aside>
+
+    <main>
+
+      <!-- General -->
+      <section id="general" class="section active">
+        <h2>تنظیمات کلی</h2>
+
+        <div class="card">
+          <div class="row">
+            <div>
+              <div class="row-title">فعال بودن Owli</div>
+              <div class="row-sub">بر روی همه سایت‌ها اعمال می‌شود</div>
+            </div>
+            <label class="toggle">
+              <input id="globalEnabled" type="checkbox">
+              <span class="track"><span class="thumb"></span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">حالت پیش‌فرض جهت متن</div>
+          <div class="mode-list">
+            <label class="mode-option">
+              <input type="radio" name="mode" value="auto">
+              <div class="mode-info">
+                <span class="mode-name">خودکار</span>
+                <span class="mode-desc">بر اساس محتوای هر پاراگراف تشخیص می‌دهد</span>
+              </div>
+            </label>
+            <label class="mode-option">
+              <input type="radio" name="mode" value="rtl">
+              <div class="mode-info">
+                <span class="mode-name">راست‌چین</span>
+                <span class="mode-desc">همه متن‌ها را راست‌چین می‌کند</span>
+              </div>
+            </label>
+            <label class="mode-option">
+              <input type="radio" name="mode" value="ltr">
+              <div class="mode-info">
+                <span class="mode-name">چپ‌چین</span>
+                <span class="mode-desc">همه متن‌ها را چپ‌چین می‌کند</span>
+              </div>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exceptions -->
+      <section id="exceptions" class="section">
+        <h2>سایت‌های استثنا</h2>
+        <p class="section-desc">این سایت‌ها از تغییر جهت متن مستثنا می‌شوند.</p>
+
+        <div class="card">
+          <div class="add-row">
+            <input id="newSiteInput" type="text"
+              placeholder="مثال: github.com"
+              autocomplete="off" spellcheck="false" dir="ltr">
+            <button id="addSiteBtn" type="button">افزودن</button>
+          </div>
+          <p id="inputError" class="input-error"></p>
+        </div>
+
+        <div class="card" id="exceptionsCard">
+          <ul id="exceptionList" class="exception-list"></ul>
+          <p id="noExceptions" class="empty-state">هیچ استثنایی ثبت نشده.</p>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <h2>درباره Owli</h2>
+        <div class="card about-card">
+          <svg class="about-owl" viewBox="0 0 64 64" fill="none">
+            <ellipse cx="32" cy="38" rx="20" ry="22" fill="#e8c97e"/>
+            <ellipse cx="32" cy="42" rx="14" ry="14" fill="#f5e6b8"/>
+            <polygon points="20,18 26,8 32,18" fill="#e8c97e"/>
+            <polygon points="32,18 38,8 44,18" fill="#e8c97e"/>
+            <circle cx="25" cy="30" r="8" fill="white"/>
+            <circle cx="39" cy="30" r="8" fill="white"/>
+            <circle cx="25" cy="30" r="4" fill="#2d2010"/>
+            <circle cx="39" cy="30" r="4" fill="#2d2010"/>
+            <circle cx="26.5" cy="28.5" r="1.5" fill="white"/>
+            <circle cx="40.5" cy="28.5" r="1.5" fill="white"/>
+            <polygon points="29,39 32,44 35,39" fill="#d4911a"/>
+          </svg>
+          <div class="about-text">
+            <p class="about-name">Owli</p>
+            <p class="about-version" id="extVersion">نسخه —</p>
+            <p class="about-desc">ابزار هوشمند تنظیم جهت متن برای فارسی، عربی و متن‌های ترکیبی. بلوک‌های کد همیشه چپ‌چین می‌مانند.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
