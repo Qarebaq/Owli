@@ -28,7 +28,7 @@
   const LATIN_RE = /[A-Za-z\u00C0-\u024F]/u;
   const STRONG_RE = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFFA-Za-z\u00C0-\u024F]/gu;
 
-  let settings = {
+  let settings = { exceptions: [],
     enabled: true,
     mode: "auto",
     siteOverrides: {}
@@ -37,6 +37,7 @@
   const hostname = location.hostname;
 
   function effectiveEnabled() {
+    if ((settings.exceptions ?? []).includes(hostname)) return false;
     const override = settings.siteOverrides?.[hostname];
     return override ?? settings.enabled;
   }
